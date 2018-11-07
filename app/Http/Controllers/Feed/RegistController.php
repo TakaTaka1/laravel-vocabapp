@@ -12,7 +12,7 @@ class RegistController extends Controller
     	return view('feed.index');
     }
 
-    public function edit($id=null){
+    public function edit(Request $request ,$id=null){
     	// TODO 登録処理
     	return view('feed.edit');
 

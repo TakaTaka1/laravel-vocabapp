@@ -18,6 +18,10 @@
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('user.home');
-Route::get('/regist','Feed\RegistController@index')->name('user.regist');
+
+Route::get('/feed/home','Feed\RegistController@index')->name('user.feed');
+// Route::get('/regist','Feed\RegistController@index')->name('user.regist');
 Route::get('/edit{id?}','Feed\RegistController@edit')->name('user.edit');
 Route::post('/edit{id?}','Feed\RegistController@edit')->name('user.edit');
+
+//Route::get('/login','Auth\LoginController')->name('user.login');

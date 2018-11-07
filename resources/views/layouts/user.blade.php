@@ -23,7 +23,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ route('login') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -66,17 +66,16 @@
                                     </form>
                                 </div>
                             </li>
-                        
+                        @endguest          
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="content-page mx-auto">
+        <div class="py-4 content-page mx-auto">
             <div class="content">
                 @yield('content')
             </div>
-        </div>
-        @endguest
+        </div>        
     </div>
 </body>
 </html>
