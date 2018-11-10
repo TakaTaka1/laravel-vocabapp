@@ -15,4 +15,30 @@
 </form>
 </div>
 </div>
+
+<br><br>
+<div class="row">
+<div class="col-8 offset-2">
+<form class="form-inline" method="POST" action="{{ route('static.create') }}">
+  @csrf
+  <div class="input-group mb-2 mr-sm-2 col-md-2">
+    <input type="text" name="slug" class="form-control" id="slug" placeholder="Link">
+  </div>
+  <div class="input-group mb-2 mr-sm-2 col-md-2">
+    <input type="text" name="name" class="form-control" placeholder="name">
+  </div>
+  <div class="input-group mb-2 mr-sm-2 col-md-3">
+    <textarea name="contents" class="form-control"></textarea> 
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">RegistPage</button>
+</form>
+</div>
+</div>
+@foreach($getAll as $all)
+<div class="row">
+	<div class="col-8 offset-2">
+		<a href="{{ route('static.show'  ,$all->id)}}">{{ $all->name }}</a>
+	</div>	
+</div>
+@endforeach
 @endsection

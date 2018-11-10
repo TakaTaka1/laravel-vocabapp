@@ -3,13 +3,16 @@
 namespace App\Http\Controllers\Feed;
 
 use Illuminate\Http\Request;
+use App\StaticPage;
 use App\Http\Controllers\Controller;
 
 class RegistController extends Controller
 {
     //
     public function index(){
-    	return view('feed.index');
+    	$static = new StaticPage;
+    	$getAll = $static->get()->all();
+    	return view('feed.index', compact('getAll'));
     }
 
     public function edit(Request $request ,$id=null){

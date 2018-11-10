@@ -18,6 +18,9 @@
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('user.home');
+Route::post('/create/', 'StaticPageController@create')->name('static.create');
+Route::get('show/{id}', 'StaticPageController@showPage')->name('static.show');
+
 
 Route::get('/feed/home','Feed\RegistController@index')->name('user.feed');
 // Route::get('/regist','Feed\RegistController@index')->name('user.regist');
