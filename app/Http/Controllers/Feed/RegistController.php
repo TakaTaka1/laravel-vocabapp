@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Feed;
 use Illuminate\Http\Request;
 use App\StaticPage;
 use App\Http\Controllers\Controller;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class RegistController extends Controller
 {

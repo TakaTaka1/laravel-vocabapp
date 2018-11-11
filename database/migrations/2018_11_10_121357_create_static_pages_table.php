@@ -30,6 +30,6 @@ class CreateStaticpagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('staticpages');
+        Schema::dropIfExists('static_pages');
     }
 }

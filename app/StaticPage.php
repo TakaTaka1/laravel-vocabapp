@@ -8,6 +8,6 @@ class StaticPage extends Model
 {
     //
     protected $fillable =[
-    	'slug','name','contents'
+    	'slug','name','contents','img_file'
     ];
 }
