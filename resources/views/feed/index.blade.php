@@ -49,15 +49,27 @@
     </div>
 @endif
 
-
-
-
 @foreach($getAll as $all)
 <div class="row">
-	<div class="col-8 offset-2">
-		<a href="{{ route('static.show'  ,$all->id)}}">{{ $all->name }}</a>
-	</div>	
+  <div class="col-8 offset-2">
+    <a href="{{ route('static.show'  ,$all->id)}}">{{ $all->name }}</a>
+  </div>  
 </div>
-
 @endforeach
+
+
+
+<div class="row">
+<div class="col-8 offset-2">
+<form class="form-inline" method="get" action="{{ route('sample.request') }}">
+  <input type="hidden" value="">
+  <div class="input-group mb-2 mr-sm-2 col-md-3">
+    <!-- old使わない場合 -->
+    <!-- <input type="text" value="<?php if(!empty($post['num'])) echo $post['num'] ?>" name="num" placeholder="test"> -->
+  <input type="text" value="{{ old('num') }}" name="num" placeholder="test">    
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">subimt</button>
+</form>
+</div>
+</div>
 @endsection

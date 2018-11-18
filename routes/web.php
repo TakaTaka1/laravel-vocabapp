@@ -35,4 +35,6 @@ Route::get('/', function() {
 	return view('app');
 });
 
+Route::get('/sample', 'SampleController@post')->name('sample.request');
+
 //Route::get('/login','Auth\LoginController')->name('user.login');
