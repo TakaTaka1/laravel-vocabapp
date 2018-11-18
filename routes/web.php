@@ -27,4 +27,12 @@ Route::get('/feed/home','Feed\RegistController@index')->name('user.feed');
 Route::get('/edit{id?}','Feed\RegistController@edit')->name('user.edit');
 Route::post('/edit{id?}','Feed\RegistController@edit')->name('user.edit');
 
+Route::namespace('Api')->group(function(){
+	Route::post('/message', 'MessageController@store');
+});
+
+Route::get('/', function() {
+	return view('app');
+});
+
 //Route::get('/login','Auth\LoginController')->name('user.login');

@@ -16,6 +16,10 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
+    <!-- laravel-echo server socket.io-->
+    <script src="//localhost:6001/socket.io/socket.io.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
